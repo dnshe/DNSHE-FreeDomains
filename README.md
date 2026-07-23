@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/DNS-Full%20Record%20Support-1e293b?style=for-the-badge" alt="DNS">
 </p>
 
-**English** | [简体中文](./README_ZH.md)
+**English** | [简体中文](./README_ZH.md) | [日本語](./README_JA.md)
 
 DNSHE is a free domain registration and DNS resolution service built by a Singapore youth public-interest team. We provide developers, students, open-source projects, and early-stage internet creators with free, stable, and easy-to-use domain infrastructure.
 
