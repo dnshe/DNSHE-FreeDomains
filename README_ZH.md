@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/DNS-Full%20Record%20Support-1e293b?style=for-the-badge" alt="DNS">
 </p>
 
-[English](./README.md) | **简体中文**
+[English](./README.md) | **简体中文** | [日本語](./README_JA.md)
 
 DNSHE 是由一支新加坡青年公益团队打造的免费域名注册与 DNS 解析服务。我们为开发者、学生、开源项目和早期互联网创作者提供免费、稳定、易用的域名基础设施，让可靠的网络入口触手可及。
 
