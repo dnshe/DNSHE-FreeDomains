@@ -1,102 +1,108 @@
-# DNSHE Free Domains
-
-<p align="left">
-  <a href="https://www.dnshe.com"><img src="https://img.shields.io/badge/Website-dnshe.com-0ea5e9?style=for-the-badge" alt="Website"></a>
-  <img src="https://img.shields.io/badge/Status-Active-16a34a?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/Service-Free%20Domains-0284c7?style=for-the-badge" alt="Free Domains">
-  <img src="https://img.shields.io/badge/DNS-Full%20Record%20Support-1e293b?style=for-the-badge" alt="DNS">
+<p align="center">
+  <a href="https://www.dnshe.com/"><img src="./assets/dnshe-logo.png" alt="DNSHE" width="280"></a>
 </p>
 
-**English** | [简体中文](./README_ZH.md)
+<h1 align="center">DNSHE Free Domains</h1>
 
-DNSHE is a free domain registration and DNS resolution service built by a Singapore youth public-interest team. We provide developers, students, open-source projects, and early-stage internet creators with free, stable, and easy-to-use domain infrastructure.
+<p align="center">Simple, fast, free domain registration and DNS. Give every idea a home on the internet.</p>
 
-This repository is the public information hub for DNSHE Free Domains. It is intended for project introduction, quick-start guidance, suffix information, service links, and community-facing updates.
+<p align="center">
+  <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="Create a free account"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="Open the domain console"></a>
+  <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="Visit the website"></a>
+</p>
 
-## What DNSHE Provides
+<p align="center"><strong>English</strong> · <a href="./README_ZH.md">简体中文</a></p>
 
-- Free domain registration under DNSHE-operated public suffixes.
-- Full DNS record management, including A, AAAA, CNAME, MX, TXT, NS, SRV, and CAA records.
-- Dashboard-based domain and DNS management.
-- API-driven workflows for automation, CI/CD, testing environments, and project deployment.
-- Abuse handling and compliance processes to protect shared root domains.
-- Public-interest infrastructure for developers, students, and open-source projects.
+## About DNSHE
 
-## Open Registration Suffixes
+DNSHE is a non-profit domain distribution platform driven by a Singapore youth team. We aim to lower the barrier to creating content on the internet by providing free, accessible domain infrastructure for developers, students, and open-source enthusiasts worldwide.
 
-The following suffixes are currently promoted for open registration:
+The basic domain service is free forever, with no credit card or payment information required and no forced advertising on your domain or website. Use it for a personal blog, portfolio, open-source project, API endpoint, or automation service.
 
-| Suffix | Recommended Use | Notes |
-| --- | --- | --- |
-| `.de5.net` | Tech blogs, portfolios, demos, and open-source projects | Short and developer-friendly. |
-| `.us.ci` | CI/CD, SaaS, API endpoints, and testing environments | Recommended for automation workflows. |
-| `.cc.cd` | Personal brands, design studios, and creative projects | Memorable and suitable for public showcases. |
-| `.bot.cd` | AI bots, chat assistants, webhooks, and automation projects | Built for bot and automation use cases. |
+This repository introduces DNSHE Free Domains and provides registration guidance, suffix information, and links to API documentation. Register domains and manage DNS in the [DNSHE Console](https://my.dnshe.com/index.php?m=domain_hub).
 
-More suffixes may be available after signing in to the DNSHE Console. Availability, limits, renewal rules, and registration requirements are subject to the dashboard and service policies.
+## Features
+
+- **Free registration and renewal**: No hidden fees for the basic service. Renew for free, or unlock permanent validity through the friend-assistance program.
+- **Multiple DNS record types**: Manage A, AAAA, CNAME, MX, TXT, NS, SRV, CAA, and other records for websites, email, and domain verification.
+- **Custom nameservers**: Use DNSHE DNS or change NS to delegate your domain to a third-party DNS provider.
+- **Dashboard management**: Manage domains, DNS records, and renewals in one place.
+- **API automation**: Manage domains and DNS records programmatically from scripts, CI/CD, and deployment workflows.
+
+## Available Suffixes
+
+The website currently highlights four recommended suffixes:
+
+- **`.de5.net` — Tech & development**: Personal blogs, portfolios, and open-source demos, such as `myproject.de5.net`.
+- **`.us.ci` — CI/CD & services**: Continuous integration, SaaS, API endpoints, and test environments, such as `myapi.us.ci`.
+- **`.cc.cd` — Creative projects**: Personal brands, design studios, and creative showcases, such as `portfolio.cc.cd`.
+- **`.bot.cd` — Bots & automation**: AI bots, chat assistants, webhooks, and automation services, such as `assistant.bot.cd`.
+
+These domain names are examples, not availability claims. Check the console for more suffixes, live availability, registration quotas, and review requirements.
 
 ## Quick Start
 
-1. Create an account at [DNSHE](https://www.dnshe.com) or the [DNSHE Client Area](https://my.dnshe.com/register.php).
-2. Open the [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub).
-3. Search for an available domain prefix and choose a supported suffix.
-4. Register the domain and configure DNS records in the dashboard.
-5. Keep your contact information current and renew or manage the domain according to the dashboard rules.
+1. [Create a free account](https://my.dnshe.com/register.php), or [sign in](https://my.dnshe.com/clientarea.php) if you already have one.
+2. Open the [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub), search for a domain prefix, and choose a suffix.
+3. Register the domain and add the A, AAAA, CNAME, or other DNS records your project needs. You can also change NS to use a third-party DNS provider.
+4. Connect the domain to your website or application, then follow your hosting provider's instructions for verification and HTTPS.
+5. Keep your contact email up to date and renew for free when notified.
 
-No credit card is required for the basic free domain service.
+## Validity & Renewal
 
-## API and Automation
+**A free service does not mean every newly registered domain is automatically exempt from renewal.** According to the website FAQ:
 
-DNSHE is designed to work with automation workflows. You can use the API to manage domains and DNS records programmatically for scripts, CI/CD, deployment pipelines, testing environments, and certificate workflows.
+- Free domains have a default registration term of **1 year**.
+- You can **renew for free within 180 days before expiration**.
+- Go to **Feature Center → Permanent Domain Upgrade** to unlock **permanent validity (no renewal required)** for free through friend assistance.
+- Expiration reminders are sent by email. Telegram reminders are also available if you link Telegram and enable notifications.
+- Domains may be suspended or deleted for rule violations, or deleted if they remain unrenewed beyond the redemption period.
 
-- API documentation: [Free Domain Name Service API User Manual](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- Access token management: [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub)
+See the console and [Terms of Service](https://www.dnshe.com/tos.html) for your domain's status, renewal options, and upgrade conditions.
 
-Keep API keys, tokens, SSH keys, and account credentials private. Do not commit secrets to public repositories.
+## API & Developer Resources
 
-## Acceptable Use
+Manage domains and DNS records programmatically from scripts, testing environments, and deployment pipelines:
 
-DNSHE is shared infrastructure. To protect users and root domains, the following activities are not allowed:
+- [Online API User Manual](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
+- [Repository API documentation](./docs/api.md) · [中文 API 文档](./docs/api_zh.md)
+- [Console & API credential management](https://my.dnshe.com/index.php?m=domain_hub)
+- [Knowledge Base](https://my.dnshe.com/knowledgebase)
 
-- Phishing, fraud, impersonation, fake login pages, or credential theft.
-- Malware, botnets, command-and-control nodes, spam, or abusive traffic.
-- DDoS, unauthorized scanning, brute-force activity, proxy abuse, or ban evasion.
-- Copyright, trademark, or other intellectual-property infringement.
-- Illegal content or content that violates registry, upstream provider, or applicable legal requirements.
-- Bulk abuse, automated quota bypass, resale, rental, or unauthorized sharing of account resources.
+Refer to the latest online documentation and console for endpoints, authentication, and request limits. Keep API keys, API secrets, and account credentials private; never commit them to a public repository.
 
-DNSHE may remove DNS records, suspend domains, restrict accounts, refuse renewals, preserve evidence, or report abuse to upstream providers or authorities when necessary.
+## Acceptable Use & Abuse Reports
 
-## Legal and Safety Notes
+DNSHE is shared infrastructure. Do not use it for phishing, fraud, malware, spam, DDoS, unauthorized scanning, brute-force attacks, proxy abuse, ban evasion, infringement, or other illegal activities. Quota bypass, resale, rental, and unauthorized sharing of account resources are prohibited.
 
-User-generated content uploaded, hosted, published, resolved, linked, forwarded, displayed, or distributed through DNSHE services is the user's responsibility. DNSHE acts as an infrastructure service provider and does not endorse or assume responsibility for user-generated content or user business activities.
+Users are responsible for content and business activities published, linked, or distributed through their domains. To protect security and service operations, DNSHE may remove DNS records, suspend domains, restrict accounts, or refuse renewals under its terms, and may preserve evidence or report abuse to upstream providers or relevant authorities when necessary. Free services may be restricted or terminated for security, compliance, operational, or abuse-prevention reasons.
 
-Free services have no cash value and may be limited, reviewed, suspended, or terminated for security, compliance, operational, or abuse-prevention reasons. Please read the full terms before using the service.
+- [Terms of Service](https://www.dnshe.com/tos.html) · [Privacy Policy](https://www.dnshe.com/privacy.html)
+- [Abuse Reporting Center](https://www.dnshe.com/domainabuse/) · [abuse@dnshe.com](mailto:abuse@dnshe.com)
 
-## Abuse Reports
+Include the domain, abuse type, relevant URLs, evidence, and your contact email to help us investigate.
 
-If you need to report phishing, malware, spam, infringement, illegal activity, or any other abuse involving DNSHE domains, use the official abuse channel:
+## Contact & Support
 
-- Abuse center: [https://www.dnshe.com/domainabuse/](https://www.dnshe.com/domainabuse/)
-- Urgent abuse email: [abuse@dnshe.com](mailto:abuse@dnshe.com)
+- **Account, domain, DNS, and API questions**: [support@dnshe.com](mailto:support@dnshe.com)
+- **Official updates**: [X / @dnshecom](https://x.com/dnshecom)
+- **Support the project**: [Sponsor DNSHE](https://www.dnshe.com/sponsor.html)
 
-Please include the domain name, abuse type, evidence, screenshots, URLs, logs, and your contact email when submitting a report.
+If DNSHE helps your project, consider starring this repository. Contributions of servers, bandwidth, and domains are welcome; contact us by email to discuss a longer-term partnership.
 
-## Useful Links
+## Partners & Sponsors
 
-- Website: [https://www.dnshe.com](https://www.dnshe.com)
-- Client area: [https://my.dnshe.com](https://my.dnshe.com)
-- Domain registration: [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub)
-- API documentation: [API User Manual](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- Terms of Service: [https://www.dnshe.com/tos.html](https://www.dnshe.com/tos.html)
-- Privacy Policy: [https://www.dnshe.com/privacy.html](https://www.dnshe.com/privacy.html)
-- Report Abuse: [https://www.dnshe.com/domainabuse/](https://www.dnshe.com/domainabuse/)
-- Sponsor DNSHE: [https://www.dnshe.com/sponsor.html](https://www.dnshe.com/sponsor.html)
+Thank you to the following partners for supporting DNSHE's free domain and DNS infrastructure. Listed in no particular order.
 
-## Support
+<p align="center">
+  <a href="https://www.digitalocean.com/"><img src="./assets/sponsors/digitalocean.svg" alt="DigitalOcean" width="240"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://alphavps.com/"><img src="https://alphavps.com/assets/img/logo-purple-dark.svg" alt="AlphaVPS" width="200"></a>
+</p>
 
-For account, domain, DNS, API, or partnership questions, contact:
+<p align="center">
+  <a href="https://www.digitalocean.com/">DigitalOcean</a> · <a href="https://alphavps.com/">AlphaVPS</a>
+</p>
 
-- Support email: [support@dnshe.com](mailto:support@dnshe.com)
-
-If DNSHE helps your project, consider starring this repository to support the public free-domain infrastructure.
+<p align="center"><a href="https://www.dnshe.com/sponsor.html">Become a partner / Sponsor DNSHE</a> · <a href="mailto:support@dnshe.com">Discuss a partnership</a></p>
