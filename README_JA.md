@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="無料アカウントを作成"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="ドメイン管理画面を開く"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E7%AE%A1%E7%90%86-DNSHE-16a34a?style=for-the-badge" alt="ドメイン管理画面を開く"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="公式サイトへ"></a>
 </p>
 
@@ -44,7 +44,7 @@ DNSHE は、シンガポールの若者チームが運営する非営利のド�
 ## はじめ方
 
 1. [無料アカウントを作成](https://my.dnshe.com/register.php)します。登録済みの場合は [ログイン](https://my.dnshe.com/clientarea.php)してください。
-2. [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub) を開き、希望する名前を検索してサフィックスを選びます。
+2. [ドメイン管理](https://my.dnshe.com/index.php?m=domain_hub) を開き、希望する名前を検索してサフィックスを選びます。
 3. ドメインを登録し、プロジェクトに必要な A、AAAA、CNAME などの DNS レコードを追加します。NS を変更して外部の DNS を利用することもできます。
 4. ドメインを Web サイトやアプリに紐づけ、ホスティングサービスの案内に従って認証と HTTPS の設定を行います。
 5. 連絡先メールアドレスを最新の状態に保ち、有効期限の通知を確認して無料更新を行います。
@@ -65,8 +65,8 @@ DNSHE は、シンガポールの若者チームが運営する非営利のド�
 
 API を使ってドメインと DNS レコードを管理し、スクリプト、テスト環境、デプロイパイプラインに組み込めます。
 
-- [オンライン API マニュアル](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [日本語 API ドキュメント](./docs/api_ja.md) · [英語版](./docs/api.md)
+- [公式 API ガイド（完全版）](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [日本語 API ドキュメント](./docs/api_ja.md)
 - [管理画面・API 認証情報の管理](https://my.dnshe.com/index.php?m=domain_hub)
 - [ヘルプセンター](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ DNSHE は共有のインフラです。フィッシング、詐欺、マルウ�
 ## お問い合わせ・サポート
 
 - **アカウント、ドメイン、DNS、API に関するお問い合わせ**：[support@dnshe.com](mailto:support@dnshe.com)
+- **コミュニティ**：[GitHub で DNSHE について話し合い、活用方法を共有する](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **公式情報**：[X / @dnshecom](https://x.com/dnshecom)
 - **プロジェクトへの支援**：[DNSHE を支援する](https://www.dnshe.com/sponsor.html)
 

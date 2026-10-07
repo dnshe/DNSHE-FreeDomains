@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="Создать бесплатный аккаунт"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="Открыть панель управления доменами"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%BE%D0%BC%D0%B5%D0%BD%D0%B0%D0%BC%D0%B8-DNSHE-16a34a?style=for-the-badge" alt="Открыть панель управления доменами"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="Перейти на официальный сайт"></a>
 </p>
 
@@ -44,7 +44,7 @@ DNSHE — некоммерческая платформа предоставле
 ## Начало работы
 
 1. [Создайте бесплатный аккаунт](https://my.dnshe.com/register.php) или [войдите](https://my.dnshe.com/clientarea.php), если уже зарегистрированы.
-2. Откройте [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub), найдите подходящее имя и выберите суффикс.
+2. Откройте [Управление доменами](https://my.dnshe.com/index.php?m=domain_hub), найдите подходящее имя и выберите суффикс.
 3. Зарегистрируйте домен и добавьте нужные проекту записи A, AAAA, CNAME или другие DNS-записи. Также можно изменить NS для использования стороннего DNS-провайдера.
 4. Подключите домен к сайту или приложению и настройте проверку владения и HTTPS по инструкции вашего хостинг-провайдера.
 5. Поддерживайте актуальность контактного адреса электронной почты, следите за напоминаниями и вовремя продлевайте домен бесплатно.
@@ -65,8 +65,8 @@ DNSHE — некоммерческая платформа предоставле
 
 Управляйте доменами и DNS-записями программно, подключая DNSHE к скриптам, тестовым средам и процессам развёртывания:
 
-- [Онлайн-руководство по API](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [Документация API на русском](./docs/api_ru.md) · [На английском](./docs/api.md)
+- [Полное официальное руководство по API](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [Документация API на русском](./docs/api_ru.md)
 - [Панель управления и управление учётными данными API](https://my.dnshe.com/index.php?m=domain_hub)
 - [База знаний](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ DNSHE — общая инфраструктура. Запрещено испол
 ## Контакты и поддержка
 
 - **Вопросы об аккаунте, доменах, DNS и API**: [support@dnshe.com](mailto:support@dnshe.com)
+- **Сообщество**: [Обсуждайте DNSHE и делитесь опытом использования на GitHub](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **Официальные новости**: [X / @dnshecom](https://x.com/dnshecom)
 - **Поддержать проект**: [Стать спонсором DNSHE](https://www.dnshe.com/sponsor.html)
 

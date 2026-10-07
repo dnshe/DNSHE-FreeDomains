@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/免费注册-创建账户-0ea5e9?style=for-the-badge" alt="免费创建账户"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-管理域名-16a34a?style=for-the-badge" alt="打开域名控制台"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/%E7%AE%A1%E7%90%86%E5%9F%9F%E5%90%8D-DNSHE-16a34a?style=for-the-badge" alt="打开域名控制台"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="访问官网"></a>
 </p>
 
@@ -44,7 +44,7 @@ DNSHE 是由新加坡青年团队驱动的非营利性域名分发平台，致�
 ## 快速开始
 
 1. [免费创建账户](https://my.dnshe.com/register.php)，已有账户可直接 [登录](https://my.dnshe.com/clientarea.php)。
-2. 进入 [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub)，搜索心仪的域名前缀并选择后缀。
+2. 进入 [管理域名](https://my.dnshe.com/index.php?m=domain_hub)，搜索心仪的域名前缀并选择后缀。
 3. 完成注册，按项目需要添加 A、AAAA、CNAME 等 DNS 记录，或修改 NS 使用第三方 DNS。
 4. 将域名绑定至你的站点或应用，并按托管平台的指引完成验证与 HTTPS 配置。
 5. 保持联系邮箱有效，留意到期提醒并及时免费续期。
@@ -65,8 +65,8 @@ DNSHE 是由新加坡青年团队驱动的非营利性域名分发平台，致�
 
 通过 API 以编程方式管理域名和解析记录，将 DNSHE 接入你的脚本、测试环境或部署流水线：
 
-- [在线 API 使用手册](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [仓库内中文 API 文档](./docs/api_zh.md) · [English API documentation](./docs/api.md)
+- [官网完整 API 文档](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [仓库内中文 API 文档](./docs/api_zh.md)
 - [控制台与 API 密钥管理入口](https://my.dnshe.com/index.php?m=domain_hub)
 - [帮助中心](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ DNSHE 是共享基础设施。请勿用于钓鱼、欺诈、恶意软件、垃�
 ## 联系与支持
 
 - **账户、域名、DNS 与 API 问题**：[support@dnshe.com](mailto:support@dnshe.com)
+- **社区讨论**：[在 GitHub 社区讨论 DNSHE，交流使用经验](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **官方动态**：[X / @dnshecom](https://x.com/dnshecom)
 - **支持项目**：[赞助 DNSHE](https://www.dnshe.com/sponsor.html)
 

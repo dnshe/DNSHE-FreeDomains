@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="Kostenloses Konto erstellen"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="Domains verwalten"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domains%20verwalten-DNSHE-16a34a?style=for-the-badge" alt="Domains verwalten"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="Offizielle Website besuchen"></a>
 </p>
 
@@ -44,7 +44,7 @@ Diese Namen sind Beispiele und keine Verfügbarkeitszusagen. Weitere Endungen, a
 ## Erste Schritte
 
 1. [Erstellen Sie ein kostenloses Konto](https://my.dnshe.com/register.php) oder [melden Sie sich an](https://my.dnshe.com/clientarea.php), wenn Sie bereits eines haben.
-2. Öffnen Sie den [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub), suchen Sie einen gewünschten Namen und wählen Sie eine Endung.
+2. Öffnen Sie den [Domains verwalten](https://my.dnshe.com/index.php?m=domain_hub), suchen Sie einen gewünschten Namen und wählen Sie eine Endung.
 3. Registrieren Sie die Domain und fügen Sie benötigte A-, AAAA-, CNAME- oder andere DNS-Einträge hinzu. Sie können auch NS ändern, um einen externen DNS-Anbieter zu nutzen.
 4. Verbinden Sie die Domain mit Ihrer Website oder Anwendung und richten Sie Verifizierung und HTTPS nach den Anweisungen Ihres Hostinganbieters ein.
 5. Halten Sie Ihre Kontaktadresse aktuell, beachten Sie Ablaufbenachrichtigungen und verlängern Sie rechtzeitig kostenlos.
@@ -65,8 +65,8 @@ Den Domainstatus, Verlängerungsmöglichkeiten und Upgrade-Bedingungen finden Si
 
 Verwalten Sie Domains und DNS-Einträge programmgesteuert über Skripte, Testumgebungen und Bereitstellungsprozesse:
 
-- [Onlinehandbuch zur API](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [Deutsche API-Dokumentation](./docs/api_de.md) · [Englische Version](./docs/api.md)
+- [Vollständiges offizielles API-Handbuch](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [Deutsche API-Dokumentation](./docs/api_de.md)
 - [Konsole und Verwaltung der API-Zugangsdaten](https://my.dnshe.com/index.php?m=domain_hub)
 - [Hilfecenter](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ Geben Sie die Domain, die Art des Missbrauchs, relevante URLs, Belege und Ihre K
 ## Kontakt und Unterstützung
 
 - **Fragen zu Konten, Domains, DNS und API**: [support@dnshe.com](mailto:support@dnshe.com)
+- **Community**: [Auf GitHub über DNSHE diskutieren und Nutzungserfahrungen teilen](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **Offizielle Neuigkeiten**: [X / @dnshecom](https://x.com/dnshecom)
 - **Projekt unterstützen**: [DNSHE sponsern](https://www.dnshe.com/sponsor.html)
 

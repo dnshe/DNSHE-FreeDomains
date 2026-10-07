@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="무료 계정 생성"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="도메인 관리"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/%EB%8F%84%EB%A9%94%EC%9D%B8%20%EA%B4%80%EB%A6%AC-DNSHE-16a34a?style=for-the-badge" alt="도메인 관리"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="공식 사이트 방문"></a>
 </p>
 
@@ -44,7 +44,7 @@ DNSHE는 싱가포르의 청년 팀이 운영하는 비영리 도메인 배포 �
 ## 시작하기
 
 1. [무료 계정을 생성](https://my.dnshe.com/register.php)하거나 기존 계정으로 [로그인](https://my.dnshe.com/clientarea.php)합니다.
-2. [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub)에서 원하는 이름을 검색하고 접미사를 선택합니다.
+2. [도메인 관리](https://my.dnshe.com/index.php?m=domain_hub)에서 원하는 이름을 검색하고 접미사를 선택합니다.
 3. 도메인을 등록하고 프로젝트에 필요한 A, AAAA, CNAME 등의 DNS 레코드를 추가합니다. NS를 변경하여 외부 DNS를 사용할 수도 있습니다.
 4. 도메인을 웹사이트나 앱에 연결하고 호스팅 서비스의 안내에 따라 인증 및 HTTPS 설정을 완료합니다.
 5. 연락 이메일을 최신 상태로 유지하고 만료 알림을 확인하여 제때 무료로 갱신합니다.
@@ -65,8 +65,8 @@ DNSHE는 싱가포르의 청년 팀이 운영하는 비영리 도메인 배포 �
 
 API를 통해 도메인과 DNS 레코드를 관리하고 스크립트, 테스트 환경, 배포 파이프라인에 연결할 수 있습니다.
 
-- [온라인 API 사용 설명서](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [한국어 API 문서](./docs/api_ko.md) · [영어 문서](./docs/api.md)
+- [공식 API 전체 문서](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [한국어 API 문서](./docs/api_ko.md)
 - [콘솔 및 API 인증 정보 관리](https://my.dnshe.com/index.php?m=domain_hub)
 - [도움말 센터](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ DNSHE는 공유 인프라입니다. 피싱, 사기, 악성코드, 스팸, DDoS, 
 ## 문의 및 지원
 
 - **계정, 도메인, DNS 및 API 문의**: [support@dnshe.com](mailto:support@dnshe.com)
+- **커뮤니티 토론**: [GitHub에서 DNSHE를 토론하고 사용 경험을 공유하세요](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **공식 소식**: [X / @dnshecom](https://x.com/dnshecom)
 - **프로젝트 후원**: [DNSHE 후원하기](https://www.dnshe.com/sponsor.html)
 

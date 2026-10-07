@@ -1,0 +1,791 @@
+{
+  "baseUrl": "https://api005.dnshe.com/index.php?m=domain_hub",
+  "operations": [
+    {
+      "number": "1.1",
+      "title": "listDomains",
+      "endpoint": "subdomains",
+      "action": "list",
+      "methods": [
+        "GET"
+      ],
+      "parameters": [
+        {
+          "name": "page",
+          "type": "integer",
+          "required": false,
+          "default": "1"
+        },
+        {
+          "name": "cursor_id",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "per_page",
+          "type": "integer",
+          "required": false,
+          "default": "200; 1–500"
+        },
+        {
+          "name": "include_total",
+          "type": "boolean",
+          "required": false,
+          "default": "false"
+        },
+        {
+          "name": "search",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "rootdomain",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "default": "active | suspended | expired"
+        },
+        {
+          "name": "created_from / created_to",
+          "type": "string",
+          "required": false,
+          "default": "YYYY-MM-DD"
+        },
+        {
+          "name": "sort_by",
+          "type": "string",
+          "required": false,
+          "default": "id"
+        },
+        {
+          "name": "sort_dir",
+          "type": "string",
+          "required": false,
+          "default": "desc; asc | desc"
+        },
+        {
+          "name": "fields",
+          "type": "string",
+          "required": false,
+          "default": "all"
+        }
+      ],
+      "note": "listText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list&cursor_id=0&per_page=100&fields=id,subdomain,rootdomain,status\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list&search=test&rootdomain=de5.net&status=active&sort_by=expires_at&sort_dir=asc&per_page=50\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"count\": 2,\n  \"subdomains\": [\n    {\n      \"id\": 1,\n      \"subdomain\": \"test\",\n      \"rootdomain\": \"de5.net\",\n      \"full_domain\": \"test.de5.net\",\n      \"status\": \"active\",\n      \"created_at\": \"2025-10-19 10:00:00\",\n      \"updated_at\": \"2025-10-19 10:00:00\"\n    },\n    {\n      \"id\": 2,\n      \"subdomain\": \"api\",\n      \"rootdomain\": \"de5.net\",\n      \"full_domain\": \"api.de5.net\",\n      \"status\": \"active\",\n      \"created_at\": \"2025-10-19 11:00:00\",\n      \"updated_at\": \"2025-10-19 11:00:00\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"count\": 1,\n  \"subdomains\": [\n    {\n      \"id\": 901,\n      \"subdomain\": \"test\",\n      \"rootdomain\": \"de5.net\",\n      \"full_domain\": \"test.de5.net\",\n      \"status\": \"active\"\n    }\n  ],\n  \"pagination\": {\n    \"mode\": \"cursor\",\n    \"page\": 1,\n    \"per_page\": 100,\n    \"has_more\": true,\n    \"cursor_id\": 0,\n    \"next_cursor_id\": 901\n  }\n}"
+        }
+      ]
+    },
+    {
+      "number": "1.2",
+      "title": "createDomain",
+      "endpoint": "subdomains",
+      "action": "create",
+      "methods": [
+        "POST"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain",
+          "type": "string",
+          "required": true,
+          "default": null
+        },
+        {
+          "name": "domain",
+          "type": "string",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "createText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=create\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"subdomain\": \"myapp\",\n    \"domain\": \"de5.net\"\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"Subdomain registered successfully\",\n  \"subdomain_id\": 3,\n  \"full_domain\": \"myapp.de5.net\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "1.3",
+      "title": "getDomain",
+      "endpoint": "subdomains",
+      "action": "get",
+      "methods": [
+        "GET"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "getText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=get&subdomain_id=1\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"subdomain\": {\n    \"id\": 1,\n    \"subdomain\": \"test\",\n    \"rootdomain\": \"de5.net\",\n    \"full_domain\": \"test.de5.net\",\n    \"status\": \"active\",\n    \"created_at\": \"2025-10-19 10:00:00\",\n    \"updated_at\": \"2025-10-19 10:00:00\"\n  },\n  \"dns_records\": [\n    {\n      \"id\": 1,\n      \"name\": \"test.de5.net\",\n      \"type\": \"A\",\n      \"content\": \"203.0.113.10\",\n      \"ttl\": 600,\n      \"priority\": null,\n      \"status\": \"active\",\n      \"created_at\": \"2025-10-19 10:05:00\"\n    }\n  ],\n  \"dns_count\": 1\n}"
+        }
+      ]
+    },
+    {
+      "number": "1.4",
+      "title": "deleteDomain",
+      "endpoint": "subdomains",
+      "action": "delete",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "deleteText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=delete\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"subdomain_id\": 1\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"Subdomain deleted successfully\",\n  \"subdomain_id\": 1,\n  \"full_domain\": \"test.de5.net\",\n  \"dns_records_deleted\": 4\n}"
+        }
+      ]
+    },
+    {
+      "number": "1.5",
+      "title": "renewDomain",
+      "endpoint": "subdomains",
+      "action": "renew",
+      "methods": [
+        "POST",
+        "PUT"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "renewText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=renew\" \\\n-H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n-H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"subdomain_id\": 3\n}'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"Subdomain renewed successfully\",\n  \"subdomain_id\": 3,\n  \"subdomain\": \"myapp\",\n  \"previous_expires_at\": \"2027-05-01 00:00:00\",\n  \"new_expires_at\": \"2028-05-01 00:00:00\",\n  \"renewed_at\": \"2027-04-30 00:00:00\",\n  \"never_expires\": 0,\n  \"status\": \"active\",\n  \"remaining_days\": 367,\n  \"charged_amount\": 0\n}"
+        }
+      ]
+    },
+    {
+      "number": "2.1",
+      "title": "listDns",
+      "endpoint": "dns_records",
+      "action": "list",
+      "methods": [
+        "GET"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "idsText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=list&subdomain_id=1\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"count\": 2,\n  \"records\": [\n    {\n      \"id\": 1,\n      \"record_id\": \"5a0ce6c4d1d4c71bc5e60a2a2a0e4997\",\n      \"name\": \"test.de5.net\",\n      \"type\": \"A\",\n      \"content\": \"203.0.113.10\",\n      \"ttl\": 600,\n      \"priority\": null,\n      \"line\": null,\n      \"proxied\": false,\n      \"status\": \"active\",\n      \"created_at\": \"2025-10-19 10:05:00\",\n      \"updated_at\": \"2025-10-19 10:05:00\"\n    },\n    {\n      \"id\": 2,\n      \"name\": \"www.test.de5.net\",\n      \"type\": \"CNAME\",\n      \"content\": \"test.de5.net\",\n      \"ttl\": 600,\n      \"priority\": null,\n      \"proxied\": false,\n      \"status\": \"active\",\n      \"created_at\": \"2025-10-19 10:10:00\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "number": "2.2",
+      "title": "createDns",
+      "endpoint": "dns_records",
+      "action": "create",
+      "methods": [
+        "POST"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "required": true,
+          "default": null
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": false,
+          "default": "@"
+        },
+        {
+          "name": "content",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "ttl",
+          "type": "integer",
+          "required": false,
+          "default": "600"
+        },
+        {
+          "name": "priority",
+          "type": "integer",
+          "required": false,
+          "default": "MX: 10; SRV: 0"
+        },
+        {
+          "name": "line",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_weight / weight",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_port / port",
+          "type": "integer",
+          "required": false,
+          "default": "1–65535"
+        },
+        {
+          "name": "record_target / target",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "caa_flag",
+          "type": "integer",
+          "required": false,
+          "default": "0; 0–255"
+        },
+        {
+          "name": "caa_tag",
+          "type": "string",
+          "required": false,
+          "default": "issue; 1–15 [A-Za-z0-9]"
+        },
+        {
+          "name": "caa_value",
+          "type": "string",
+          "required": false,
+          "default": null
+        }
+      ],
+      "note": "dnsText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=create\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"subdomain_id\": 1,\n    \"type\": \"A\",\n    \"content\": \"203.0.113.10\",\n    \"ttl\": 600\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"DNS record created successfully\",\n  \"id\": 738492016583241,\n  \"record_id\": \"5a0ce6c4d1d4c71bc5e60a2a2a0e4997\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "2.3",
+      "title": "modifyDns",
+      "endpoint": "dns_records",
+      "action": "modify",
+      "methods": [
+        "POST",
+        "PUT",
+        "PATCH"
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_id",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "type / name / content",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "ttl / priority",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "line",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_weight / weight",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_port / port",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_target / target",
+          "type": "string",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "caa_flag",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "caa_tag / caa_value",
+          "type": "string",
+          "required": false,
+          "default": null
+        }
+      ],
+      "note": "modifyText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=modify\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"id\": 738492016583241,\n    \"type\": \"A\",\n    \"content\": \"203.0.113.20\",\n    \"ttl\": 600\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"DNS record updated successfully\",\n  \"id\": 738492016583241,\n  \"record_id\": \"5a0ce6c4d1d4c71bc5e60a2a2a0e4997\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "2.4",
+      "title": "deleteDns",
+      "endpoint": "dns_records",
+      "action": "delete",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "type": "integer",
+          "required": false,
+          "default": null
+        },
+        {
+          "name": "record_id",
+          "type": "string",
+          "required": false,
+          "default": null
+        }
+      ],
+      "note": "idsText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=delete\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"id\": 1\n  }'"
+        },
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=delete\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"record_id\": \"5a0ce6c4d1d4c71bc5e60a2a2a0e4997\"\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"DNS record deleted successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "3.1",
+      "title": "listKeys",
+      "endpoint": "keys",
+      "action": "list",
+      "methods": [
+        "GET"
+      ],
+      "parameters": [],
+      "note": "keysListText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=list\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"count\": 2,\n  \"keys\": [\n    {\n      \"id\": 1,\n      \"key_name\": \"Production\",\n      \"api_key\": \"cfsd_xxxxxxxxxx\",\n      \"status\": \"active\",\n      \"request_count\": 1523,\n      \"last_used_at\": \"2025-10-19 15:30:00\",\n      \"created_at\": \"2025-10-19 10:00:00\"\n    },\n    {\n      \"id\": 2,\n      \"key_name\": \"Test\",\n      \"api_key\": \"cfsd_yyyyyyyyyy\",\n      \"status\": \"active\",\n      \"request_count\": 45,\n      \"last_used_at\": \"2025-10-19 14:00:00\",\n      \"created_at\": \"2025-10-19 11:00:00\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "number": "3.2",
+      "title": "createKey",
+      "endpoint": "keys",
+      "action": "create",
+      "methods": [
+        "POST"
+      ],
+      "parameters": [
+        {
+          "name": "key_name",
+          "type": "string",
+          "required": true,
+          "default": null
+        },
+        {
+          "name": "ip_whitelist",
+          "type": "string",
+          "required": false,
+          "default": null
+        }
+      ],
+      "note": "keysText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=create\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"key_name\": \"Deployment\",\n    \"ip_whitelist\": \"203.0.113.10/32\"\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"API key created successfully\",\n  \"api_key\": \"cfsd_zzzzzzzzzz\",\n  \"api_secret\": \"aaaaaaaaaaaaaaaa\",\n  \"warning\": \"Please save the api_secret, it will not be shown again\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "3.3",
+      "title": "deleteKey",
+      "endpoint": "keys",
+      "action": "delete",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "parameters": [
+        {
+          "name": "key_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "keyDeleteText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=delete\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"key_id\": 2\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"API key deleted successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "3.4",
+      "title": "regenerateKey",
+      "endpoint": "keys",
+      "action": "regenerate",
+      "methods": [
+        "POST"
+      ],
+      "parameters": [
+        {
+          "name": "key_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "keyRegenerateText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=regenerate\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"key_id\": 1\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"message\": \"API secret regenerated successfully\",\n  \"api_key\": \"cfsd_xxxxxxxxxx\",\n  \"api_secret\": \"new_secret_here\",\n  \"warning\": \"Please save the new api_secret, it will not be shown again\"\n}"
+        }
+      ]
+    },
+    {
+      "number": "4.1",
+      "title": "initiateGift",
+      "endpoint": "gifts",
+      "action": "initiate",
+      "methods": [
+        "POST",
+        "PUT"
+      ],
+      "parameters": [
+        {
+          "name": "subdomain_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "giftInitiateText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=gifts&action=initiate\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"subdomain_id\": 123\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"data\": {\n    \"gift_id\": 88,\n    \"subdomain_id\": 123,\n    \"full_domain\": \"demo.de5.net\",\n    \"code\": \"AB12CD34EF56GH78IJ\",\n    \"expires_at\": \"2026-05-12 08:00:00\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "number": "4.2",
+      "title": "acceptGift",
+      "endpoint": "gifts",
+      "action": "accept",
+      "methods": [
+        "POST",
+        "PUT"
+      ],
+      "parameters": [
+        {
+          "name": "code",
+          "type": "string",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "giftAcceptText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=gifts&action=accept\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"code\": \"AB12CD34EF56GH78IJ\"\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"data\": {\n    \"gift_id\": 88,\n    \"subdomain_id\": 123,\n    \"full_domain\": \"demo.de5.net\",\n    \"from_userid\": 1001\n  }\n}"
+        }
+      ]
+    },
+    {
+      "number": "4.3",
+      "title": "cancelGift",
+      "endpoint": "gifts",
+      "action": "cancel",
+      "methods": [
+        "POST",
+        "DELETE"
+      ],
+      "parameters": [
+        {
+          "name": "gift_id",
+          "type": "integer",
+          "required": true,
+          "default": null
+        }
+      ],
+      "note": "giftCancelText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=gifts&action=cancel\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"gift_id\": 88\n  }'"
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"data\": {\n    \"gift_id\": 88,\n    \"subdomain_id\": 123,\n    \"full_domain\": \"demo.de5.net\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "number": "4.4",
+      "title": "listGifts",
+      "endpoint": "gifts",
+      "action": "list",
+      "methods": [
+        "GET"
+      ],
+      "parameters": [],
+      "note": "giftsText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=gifts&action=list\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"count\": 1,\n  \"gifts\": [\n    {\n      \"id\": 88,\n      \"code\": \"AB12CD34EF56GH78IJ\",\n      \"full_domain\": \"demo.de5.net\",\n      \"status\": \"pending\",\n      \"from_userid\": 1001,\n      \"to_userid\": 0,\n      \"expires_at\": \"2026-05-12 08:00:00\",\n      \"created_at\": \"2026-05-11 08:00:00\"\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "number": "5.1",
+      "title": "getQuota",
+      "endpoint": "quota",
+      "action": null,
+      "methods": [
+        "GET"
+      ],
+      "parameters": [],
+      "note": "quotaText",
+      "examples": [
+        {
+          "language": "bash",
+          "code": "curl --fail-with-body --silent --show-error --max-time 30 -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+        },
+        {
+          "language": "json",
+          "code": "{\n  \"success\": true,\n  \"quota\": {\n    \"used\": 3,\n    \"base\": 5,\n    \"invite_bonus\": 2,\n    \"total\": 7,\n    \"available\": 4\n  }\n}"
+        }
+      ]
+    }
+  ],
+  "ddns": [
+    {
+      "language": "bash",
+      "code": "curl -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=ddns&action=update\" \\\n  -H \"Authorization: Bearer ${DNSHE_DDNS_TOKEN}\""
+    },
+    {
+      "language": "bash",
+      "code": "curl -X POST \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=ddns&action=update\" \\\n  -H \"X-DDNS-Token: ${DNSHE_DDNS_TOKEN}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"ip\":\"203.0.113.10\"}'"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"success\": true,\n  \"status\": \"nochg\",\n  \"changed\": false,\n  \"ip\": \"203.0.113.10\"\n}"
+    }
+  ],
+  "whois": [
+    {
+      "language": "bash",
+      "code": "curl -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=foo.de5.net\""
+    },
+    {
+      "language": "bash",
+      "code": "curl -X GET \"https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=foo.de5.net\" \\\n  -H \"X-API-Key: ${DNSHE_API_KEY}\" \\\n  -H \"X-API-Secret: ${DNSHE_API_SECRET}\""
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"success\": true,\n  \"domain\": \"foo.de5.net\",\n  \"status\": \"Registered\",\n  \"registered_at\": \"2025-01-10 08:30:00\",\n  \"expires_at\": \"2026-01-10 08:30:00\",\n  \"registrant_email\": \"whois@example.com\",\n  \"privacy_enabled\": false,\n  \"registrant_postal_code\": \"797653\",\n  \"owner_userid\": 123,\n  \"nameservers\": [\n    \"ns1.example.net\",\n    \"ns2.example.net\"\n  ],\n  \"rate_limit\": {\n    \"limit\": 2,\n    \"remaining\": 1,\n    \"reset_at\": \"2025-01-10 08:31:00\"\n  }\n}"
+    },
+    {
+      "language": "json",
+      "code": "{\n  \"success\": true,\n  \"domain\": \"foo.de5.net\",\n  \"registered\": false,\n  \"status\": \"unregistered\",\n  \"message\": \"domain not registered\"\n}"
+    }
+  ],
+  "errors": [
+    [
+      "bad_request",
+      400
+    ],
+    [
+      "auth_invalid_credentials",
+      401
+    ],
+    [
+      "auth_ip_not_allowed",
+      403
+    ],
+    [
+      "api_access_disabled",
+      403
+    ],
+    [
+      "not_found / subdomain_not_found / dns_record_not_found",
+      404
+    ],
+    [
+      "quota_exceeded",
+      429
+    ],
+    [
+      "rate_limit_exceeded",
+      429
+    ],
+    [
+      "provider_operation_failed",
+      502
+    ],
+    [
+      "internal_error",
+      500
+    ],
+    [
+      "renewal_not_yet_available",
+      422
+    ]
+  ]
+}

@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="Create a free account"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="Open the domain console"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Manage%20domains-DNSHE-16a34a?style=for-the-badge" alt="Open the domain console"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="Visit the website"></a>
 </p>
 
@@ -44,7 +44,7 @@ These domain names are examples, not availability claims. Check the console for 
 ## Quick Start
 
 1. [Create a free account](https://my.dnshe.com/register.php), or [sign in](https://my.dnshe.com/clientarea.php) if you already have one.
-2. Open the [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub), search for a domain prefix, and choose a suffix.
+2. Open the [Manage domains](https://my.dnshe.com/index.php?m=domain_hub), search for a domain prefix, and choose a suffix.
 3. Register the domain and add the A, AAAA, CNAME, or other DNS records your project needs. You can also change NS to use a third-party DNS provider.
 4. Connect the domain to your website or application, then follow your hosting provider's instructions for verification and HTTPS.
 5. Keep your contact email up to date and renew for free when notified.
@@ -65,8 +65,8 @@ See the console and [Terms of Service](https://www.dnshe.com/tos.html) for your 
 
 Manage domains and DNS records programmatically from scripts, testing environments, and deployment pipelines:
 
-- [Online API User Manual](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [Repository API documentation](./docs/api.md) · [中文 API 文档](./docs/api_zh.md)
+- [Full official API guide](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [Repository API documentation](./docs/api.md)
 - [Console & API credential management](https://my.dnshe.com/index.php?m=domain_hub)
 - [Knowledge Base](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ Include the domain, abuse type, relevant URLs, evidence, and your contact email 
 ## Contact & Support
 
 - **Account, domain, DNS, and API questions**: [support@dnshe.com](mailto:support@dnshe.com)
+- **Community discussions**: [Discuss DNSHE and share how you use it on GitHub](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **Official updates**: [X / @dnshecom](https://x.com/dnshecom)
 - **Support the project**: [Sponsor DNSHE](https://www.dnshe.com/sponsor.html)
 

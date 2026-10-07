@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="Buat akun gratis"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="Kelola domain"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Kelola%20domain-DNSHE-16a34a?style=for-the-badge" alt="Kelola domain"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="Kunjungi situs resmi"></a>
 </p>
 
@@ -44,7 +44,7 @@ Nama di atas hanya contoh dan bukan jaminan ketersediaan. Lihat konsol untuk akh
 ## Mulai Menggunakan
 
 1. [Buat akun gratis](https://my.dnshe.com/register.php), atau [masuk](https://my.dnshe.com/clientarea.php) jika sudah memiliki akun.
-2. Buka [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub), cari nama yang diinginkan, lalu pilih akhiran.
+2. Buka [Kelola domain](https://my.dnshe.com/index.php?m=domain_hub), cari nama yang diinginkan, lalu pilih akhiran.
 3. Daftarkan domain dan tambahkan rekaman A, AAAA, CNAME, atau rekaman lain sesuai kebutuhan. Anda juga dapat mengubah NS untuk menggunakan DNS pihak ketiga.
 4. Hubungkan domain ke situs atau aplikasi, lalu ikuti panduan penyedia hosting untuk verifikasi dan konfigurasi HTTPS.
 5. Pastikan alamat email kontak tetap aktif, perhatikan pengingat kedaluwarsa, dan perpanjang domain secara gratis tepat waktu.
@@ -65,8 +65,8 @@ Lihat konsol dan [Ketentuan Layanan](https://www.dnshe.com/tos.html) untuk statu
 
 Kelola domain dan DNS secara terprogram dari skrip, lingkungan pengujian, dan alur penerapan aplikasi:
 
-- [Panduan API daring](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [Dokumentasi API bahasa Indonesia](./docs/api_id.md) · [Versi bahasa Inggris](./docs/api.md)
+- [Panduan API resmi lengkap](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [Dokumentasi API bahasa Indonesia](./docs/api_id.md)
 - [Konsol dan pengelolaan kredensial API](https://my.dnshe.com/index.php?m=domain_hub)
 - [Pusat bantuan](https://my.dnshe.com/knowledgebase)
 
@@ -86,6 +86,7 @@ Sertakan nama domain, jenis penyalahgunaan, URL terkait, bukti, dan email kontak
 ## Kontak dan Dukungan
 
 - **Pertanyaan akun, domain, DNS, dan API**: [support@dnshe.com](mailto:support@dnshe.com)
+- **Diskusi komunitas**: [Diskusikan DNSHE dan bagikan pengalaman penggunaan di GitHub](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **Kabar resmi**: [X / @dnshecom](https://x.com/dnshecom)
 - **Dukung proyek**: [Jadi sponsor DNSHE](https://www.dnshe.com/sponsor.html)
 

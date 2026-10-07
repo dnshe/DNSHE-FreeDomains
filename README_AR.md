@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://my.dnshe.com/register.php"><img src="https://img.shields.io/badge/Sign_Up-Free-0ea5e9?style=for-the-badge" alt="إنشاء حساب مجاني"></a>
-  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/Domain_Hub-Manage_Domains-16a34a?style=for-the-badge" alt="إدارة النطاقات"></a>
+  <a href="https://my.dnshe.com/index.php?m=domain_hub"><img src="https://img.shields.io/badge/%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%86%D8%B7%D8%A7%D9%82%D8%A7%D8%AA-DNSHE-16a34a?style=for-the-badge" alt="إدارة النطاقات"></a>
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="زيارة الموقع الرسمي"></a>
 </p>
 
@@ -46,7 +46,7 @@ DNSHE منصة غير ربحية لتوزيع النطاقات، يديرها ف
 ## البدء
 
 1. [أنشئ حسابًا مجانيًا](https://my.dnshe.com/register.php)، أو [سجّل الدخول](https://my.dnshe.com/clientarea.php) إذا كان لديك حساب.
-2. افتح [Domain Hub](https://my.dnshe.com/index.php?m=domain_hub)، وابحث عن الاسم الذي تريده واختر اللاحقة.
+2. افتح [إدارة النطاقات](https://my.dnshe.com/index.php?m=domain_hub)، وابحث عن الاسم الذي تريده واختر اللاحقة.
 3. سجّل النطاق وأضف سجلات A أو AAAA أو CNAME أو غيرها حسب حاجة مشروعك. يمكنك أيضًا تغيير NS لاستخدام مزود DNS خارجي.
 4. اربط النطاق بموقعك أو تطبيقك، ثم اتبع تعليمات مزود الاستضافة لإتمام التحقق وإعداد HTTPS.
 5. حافظ على تحديث بريدك الإلكتروني، وانتبه إلى تنبيهات انتهاء الصلاحية وجدّد مجانًا في الوقت المناسب.
@@ -67,8 +67,8 @@ DNSHE منصة غير ربحية لتوزيع النطاقات، يديرها ف
 
 أدر النطاقات وسجلات DNS برمجيًا من البرامج النصية وبيئات الاختبار ومسارات النشر:
 
-- [دليل API عبر الإنترنت](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [وثائق API بالعربية](./docs/api_ar.md) · [النسخة الإنجليزية](./docs/api.md)
+- [دليل API الرسمي الكامل](https://my.dnshe.com/knowledgebase/13/DNSHE-Free-Domain-API-User-Guide-V2.0.html)
+- [وثائق API بالعربية](./docs/api_ar.md)
 - [لوحة التحكم وإدارة بيانات اعتماد API](https://my.dnshe.com/index.php?m=domain_hub)
 - [مركز المساعدة](https://my.dnshe.com/knowledgebase)
 
@@ -88,6 +88,7 @@ DNSHE بنية تحتية مشتركة. يُحظر استخدامها للتصي
 ## التواصل والدعم
 
 - **أسئلة الحساب والنطاقات وDNS وAPI**: [support@dnshe.com](mailto:support@dnshe.com)
+- **نقاشات المجتمع**: [ناقش DNSHE وشارك تجارب الاستخدام على GitHub](https://github.com/dnshe/DNSHE-FreeDomains/discussions)
 - **الأخبار الرسمية**: [X / @dnshecom](https://x.com/dnshecom)
 - **دعم المشروع**: [رعاية DNSHE](https://www.dnshe.com/sponsor.html)
 
