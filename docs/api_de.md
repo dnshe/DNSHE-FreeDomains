@@ -1,33 +1,33 @@
-# DNSHE Free Domain API Documentation (v2.0)
+# API-Dokumentation für kostenlose DNSHE-Domains (v2.0)
 
-<p align="center" dir="ltr"><strong>English</strong> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
+<p align="center" dir="ltr"><a href="./api.md">English</a> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <strong>Deutsch</strong> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
 
-[Back to introduction](../README.md)
+[Zurück zur Einführung](../README_DE.md)
 
-## 📌 Overview
+## 📌 Übersicht
 
-* **Base URL:**
+* **Basis-URL:**
   `https://api005.dnshe.com/index.php?m=domain_hub`
-* **Authentication:** API Key + API Secret
-* **Response Format:** JSON
-* **Rate Limit:** 60 requests/minute (configurable)
+* **Authentifizierung:** API Key + API Secret
+* **Antwortformat:** JSON
+* **Anfragelimit:** 60 Anfragen/Minute (konfigurierbar)
 
 ---
 
-## 🔐 Authentication
+## 🔐 Authentifizierung
 
-### Get API Credentials
+### API-Zugangsdaten erhalten
 
-1. Log in to DNSHE client area
-2. Go to **My Domain Management**
-3. Click **API Management** in sidebar
-4. Create a new API Key
+1. Melden Sie sich im DNSHE-Kundenbereich an
+2. Öffnen Sie **Meine Domainverwaltung** (My Domain Management)
+3. Wählen Sie **API-Verwaltung** (API Management) in der Seitenleiste
+4. Erstellen Sie einen neuen API-Schlüssel
 
 ---
 
-### Authentication Method
+### Authentifizierungsverfahren
 
-#### ✅ Recommended: HTTP Headers
+#### ✅ Empfohlen: HTTP-Header
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -35,23 +35,23 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### ❌ Deprecated: URL Parameters
+#### ❌ Deaktiviert: URL-Parameter
 
-> Passing `api_key` and `api_secret` via URL or request body is no longer supported for security reasons.
-
----
-
-## 📦 API Endpoints
+> Aus Sicherheitsgründen wird die Übermittlung von `api_key` und `api_secret` über die URL oder den Anfragekörper nicht mehr unterstützt.
 
 ---
 
-## 1️⃣ Subdomain Management
+## 📦 API-Endpunkte
 
-### 1.1 List Subdomains
+---
 
-* **Endpoint:** `subdomains`
-* **Action:** `list`
-* **Method:** `GET`
+## 1️⃣ Subdomainverwaltung
+
+### 1.1 Subdomains auflisten
+
+* **Endpunkt:** `subdomains`
+* **Aktion:** `list`
+* **Methode:** `GET`
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -59,7 +59,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### Response Example
+#### Beispielantwort
 
 ```json
 {
@@ -79,7 +79,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.2 Register Subdomain
+### 1.2 Subdomain registrieren
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=register" \
@@ -94,7 +94,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.3 Get Subdomain Details
+### 1.3 Subdomaindetails abrufen
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=get&subdomain_id=1" \
@@ -104,7 +104,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.4 Delete Subdomain
+### 1.4 Subdomain löschen
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=delete" \
@@ -116,7 +116,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.5 Renew Subdomain
+### 1.5 Subdomain verlängern
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=renew" \
@@ -128,9 +128,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-## 2️⃣ DNS Records Management
+## 2️⃣ Verwaltung von DNS-Einträgen
 
-### List DNS Records
+### DNS-Einträge auflisten
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=list&subdomain_id=1" \
@@ -140,7 +140,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_record
 
 ---
 
-### Create DNS Record
+### DNS-Eintrag erstellen
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=create" \
@@ -156,9 +156,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_recor
 
 ---
 
-## 3️⃣ API Key Management
+## 3️⃣ API-Schlüsselverwaltung
 
-### List API Keys
+### API-Schlüssel auflisten
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=list" \
@@ -168,7 +168,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&actio
 
 ---
 
-## 4️⃣ Quota
+## 4️⃣ Kontingente
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
@@ -178,7 +178,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
 
 ---
 
-## 5️⃣ WHOIS Lookup (Public API)
+## 5️⃣ WHOIS-Abfrage (öffentliche API)
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=foo.example.com"
@@ -186,7 +186,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## ❗ Error Format
+## ❗ Fehlerformat
 
 ```json
 {
@@ -198,7 +198,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🚦 Rate Limiting
+## 🚦 Begrenzung der Anfragerate
 
 ```json
 {
@@ -212,42 +212,42 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🔐 Security Best Practices
+## 🔐 Sicherheitsempfehlungen
 
-* Store API credentials in environment variables
-* Enable IP whitelist for production keys
-* Rotate API keys regularly
-* Always use HTTPS
-
----
-
-## ❓ FAQ
-
-**Q: Lost API Secret?**
-A: Use `regenerate` to create a new one
-
-**Q: Batch operations supported?**
-A: Not supported in current version
+* Speichern Sie API-Zugangsdaten in Umgebungsvariablen
+* Aktivieren Sie eine IP-Freigabeliste für Produktionsschlüssel
+* Wechseln Sie API-Schlüssel regelmäßig
+* Verwenden Sie immer HTTPS
 
 ---
 
-## 📝 Changelog
+## ❓ Häufige Fragen
+
+**Frage: API Secret verloren?**
+Antwort: Verwenden Sie `regenerate`, um ein neues zu erzeugen.
+
+**Frage: Werden Stapeloperationen unterstützt?**
+Antwort: In der aktuellen Version nicht.
+
+---
+
+## 📝 Änderungsverlauf
 
 ### v2.0 (2026-04-25)
 
-* 🚀 Official release of v2.0
-* 🔧 Optimized API command structure
-* ✨ Added new API capabilities
-* ⚡ Improved pagination & query performance
-* 🛡️ Enhanced error handling & security
+* 🚀 Offizielle Veröffentlichung von v2.0
+* 🔧 API-Befehlsstruktur optimiert
+* ✨ Neue API-Funktionen hinzugefügt
+* ⚡ Leistung bei Paginierung und Abfragen verbessert
+* 🛡️ Fehlerbehandlung und Sicherheit verbessert
 
 ---
 
 ### v1.0 (2025-10-19)
 
-* 🎉 Initial release
-* Subdomain management
-* DNS record management
-* API key management
-* Quota support
-* Rate limiting
+* 🎉 Erstveröffentlichung
+* Subdomainverwaltung
+* Verwaltung von DNS-Einträgen
+* API-Schlüsselverwaltung
+* Unterstützung von Kontingenten
+* Begrenzung der Anfragerate

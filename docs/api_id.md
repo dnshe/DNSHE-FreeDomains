@@ -1,33 +1,33 @@
-# DNSHE Free Domain API Documentation (v2.0)
+# Dokumentasi API Domain Gratis DNSHE (v2.0)
 
-<p align="center" dir="ltr"><strong>English</strong> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
+<p align="center" dir="ltr"><a href="./api.md">English</a> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <strong>Bahasa Indonesia</strong> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
 
-[Back to introduction](../README.md)
+[Kembali ke pengantar](../README_ID.md)
 
-## 📌 Overview
+## 📌 Informasi Dasar
 
-* **Base URL:**
+* **URL dasar:**
   `https://api005.dnshe.com/index.php?m=domain_hub`
-* **Authentication:** API Key + API Secret
-* **Response Format:** JSON
-* **Rate Limit:** 60 requests/minute (configurable)
+* **Autentikasi:** API Key + API Secret
+* **Format respons:** JSON
+* **Batas permintaan:** 60 permintaan/menit (dapat dikonfigurasi)
 
 ---
 
-## 🔐 Authentication
+## 🔐 Autentikasi
 
-### Get API Credentials
+### Mendapatkan Kredensial API
 
-1. Log in to DNSHE client area
-2. Go to **My Domain Management**
-3. Click **API Management** in sidebar
-4. Create a new API Key
+1. Masuk ke area klien DNSHE
+2. Buka **Pengelolaan Domain Saya** (My Domain Management)
+3. Pilih **Pengelolaan API** (API Management) pada bilah samping
+4. Buat kunci API baru
 
 ---
 
-### Authentication Method
+### Metode Autentikasi
 
-#### ✅ Recommended: HTTP Headers
+#### ✅ Direkomendasikan: Header HTTP
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -35,23 +35,23 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### ❌ Deprecated: URL Parameters
+#### ❌ Dinonaktifkan: Parameter URL
 
-> Passing `api_key` and `api_secret` via URL or request body is no longer supported for security reasons.
-
----
-
-## 📦 API Endpoints
+> Demi keamanan, pengiriman `api_key` dan `api_secret` melalui URL atau isi permintaan tidak lagi didukung.
 
 ---
 
-## 1️⃣ Subdomain Management
+## 📦 Endpoint API
 
-### 1.1 List Subdomains
+---
+
+## 1️⃣ Pengelolaan Subdomain
+
+### 1.1 Daftar Subdomain
 
 * **Endpoint:** `subdomains`
-* **Action:** `list`
-* **Method:** `GET`
+* **Tindakan:** `list`
+* **Metode:** `GET`
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -59,7 +59,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### Response Example
+#### Contoh Respons
 
 ```json
 {
@@ -79,7 +79,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.2 Register Subdomain
+### 1.2 Mendaftarkan Subdomain
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=register" \
@@ -94,7 +94,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.3 Get Subdomain Details
+### 1.3 Mendapatkan Detail Subdomain
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=get&subdomain_id=1" \
@@ -104,7 +104,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.4 Delete Subdomain
+### 1.4 Menghapus Subdomain
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=delete" \
@@ -116,7 +116,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.5 Renew Subdomain
+### 1.5 Memperpanjang Subdomain
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=renew" \
@@ -128,9 +128,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-## 2️⃣ DNS Records Management
+## 2️⃣ Pengelolaan Rekaman DNS
 
-### List DNS Records
+### Daftar Rekaman DNS
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=list&subdomain_id=1" \
@@ -140,7 +140,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_record
 
 ---
 
-### Create DNS Record
+### Membuat Rekaman DNS
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=create" \
@@ -156,9 +156,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_recor
 
 ---
 
-## 3️⃣ API Key Management
+## 3️⃣ Pengelolaan Kunci API
 
-### List API Keys
+### Daftar Kunci API
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=list" \
@@ -168,7 +168,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&actio
 
 ---
 
-## 4️⃣ Quota
+## 4️⃣ Kuota
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
@@ -178,7 +178,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
 
 ---
 
-## 5️⃣ WHOIS Lookup (Public API)
+## 5️⃣ Pencarian WHOIS (API Publik)
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=foo.example.com"
@@ -186,7 +186,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## ❗ Error Format
+## ❗ Format Kesalahan
 
 ```json
 {
@@ -198,7 +198,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🚦 Rate Limiting
+## 🚦 Pembatasan Permintaan
 
 ```json
 {
@@ -212,42 +212,42 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🔐 Security Best Practices
+## 🔐 Praktik Keamanan
 
-* Store API credentials in environment variables
-* Enable IP whitelist for production keys
-* Rotate API keys regularly
-* Always use HTTPS
-
----
-
-## ❓ FAQ
-
-**Q: Lost API Secret?**
-A: Use `regenerate` to create a new one
-
-**Q: Batch operations supported?**
-A: Not supported in current version
+* Simpan kredensial API dalam variabel lingkungan
+* Aktifkan daftar IP yang diizinkan untuk kunci produksi
+* Rotasi kunci API secara berkala
+* Selalu gunakan HTTPS
 
 ---
 
-## 📝 Changelog
+## ❓ Pertanyaan Umum
+
+**T: API Secret hilang?**
+J: Gunakan `regenerate` untuk membuat yang baru.
+
+**T: Apakah operasi massal didukung?**
+J: Belum didukung pada versi saat ini.
+
+---
+
+## 📝 Riwayat Perubahan
 
 ### v2.0 (2026-04-25)
 
-* 🚀 Official release of v2.0
-* 🔧 Optimized API command structure
-* ✨ Added new API capabilities
-* ⚡ Improved pagination & query performance
-* 🛡️ Enhanced error handling & security
+* 🚀 Rilis resmi v2.0
+* 🔧 Optimalisasi struktur perintah API
+* ✨ Penambahan kemampuan API
+* ⚡ Peningkatan performa paginasi dan kueri
+* 🛡️ Peningkatan penanganan kesalahan dan keamanan
 
 ---
 
 ### v1.0 (2025-10-19)
 
-* 🎉 Initial release
-* Subdomain management
-* DNS record management
-* API key management
-* Quota support
-* Rate limiting
+* 🎉 Rilis pertama
+* Pengelolaan subdomain
+* Pengelolaan rekaman DNS
+* Pengelolaan kunci API
+* Dukungan kuota
+* Pembatasan permintaan

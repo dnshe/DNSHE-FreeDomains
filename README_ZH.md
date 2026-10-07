@@ -12,7 +12,7 @@
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="访问官网"></a>
 </p>
 
-<p align="center"><a href="./README.md">English</a> · <strong>简体中文</strong> · <a href="./README_ZH_TW.md">繁體中文</a> · <a href="./README_JA.md">日本語</a> · <a href="./README_RU.md">Русский</a></p>
+<p align="center" dir="ltr"><a href="./README.md">English</a> · <strong>简体中文</strong> · <a href="./README_ZH_TW.md">繁體中文</a> · <a href="./README_JA.md">日本語</a> · <a href="./README_RU.md">Русский</a> · <a href="./README_ID.md">Bahasa Indonesia</a> · <a href="./README_DE.md">Deutsch</a> · <a href="./README_FR.md">Français</a> · <a href="./README_KO.md">한국어</a> · <a href="./README_AR.md">العربية</a></p>
 
 ## 关于 DNSHE
 

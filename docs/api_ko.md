@@ -1,33 +1,33 @@
-# DNSHE Free Domain API Documentation (v2.0)
+# DNSHE 무료 도메인 API 문서 (v2.0)
 
-<p align="center" dir="ltr"><strong>English</strong> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
+<p align="center" dir="ltr"><a href="./api.md">English</a> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <strong>한국어</strong> · <a href="./api_ar.md">العربية</a></p>
 
-[Back to introduction](../README.md)
+[서비스 소개로 돌아가기](../README_KO.md)
 
-## 📌 Overview
+## 📌 기본 정보
 
-* **Base URL:**
+* **기본 URL:**
   `https://api005.dnshe.com/index.php?m=domain_hub`
-* **Authentication:** API Key + API Secret
-* **Response Format:** JSON
-* **Rate Limit:** 60 requests/minute (configurable)
+* **인증 방식:** API Key + API Secret
+* **응답 형식:** JSON
+* **요청 제한:** 분당 60회 (설정 가능)
 
 ---
 
-## 🔐 Authentication
+## 🔐 인증
 
-### Get API Credentials
+### API 인증 정보 발급
 
-1. Log in to DNSHE client area
-2. Go to **My Domain Management**
-3. Click **API Management** in sidebar
-4. Create a new API Key
+1. DNSHE 고객 영역에 로그인합니다
+2. **내 도메인 관리**(My Domain Management)로 이동합니다
+3. 사이드바에서 **API 관리**(API Management)를 선택합니다
+4. 새 API 키를 생성합니다
 
 ---
 
-### Authentication Method
+### 인증 방식
 
-#### ✅ Recommended: HTTP Headers
+#### ✅ 권장: HTTP 헤더
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -35,23 +35,23 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### ❌ Deprecated: URL Parameters
+#### ❌ 사용 중지: URL 매개변수
 
-> Passing `api_key` and `api_secret` via URL or request body is no longer supported for security reasons.
-
----
-
-## 📦 API Endpoints
+> 보안상의 이유로 URL이나 요청 본문을 통한 `api_key` 및 `api_secret` 전달은 더 이상 지원되지 않습니다.
 
 ---
 
-## 1️⃣ Subdomain Management
+## 📦 API 엔드포인트
 
-### 1.1 List Subdomains
+---
 
-* **Endpoint:** `subdomains`
-* **Action:** `list`
-* **Method:** `GET`
+## 1️⃣ 하위 도메인 관리
+
+### 1.1 하위 도메인 목록 조회
+
+* **엔드포인트:** `subdomains`
+* **작업:** `list`
+* **메서드:** `GET`
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -59,7 +59,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### Response Example
+#### 응답 예시
 
 ```json
 {
@@ -79,7 +79,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.2 Register Subdomain
+### 1.2 하위 도메인 등록
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=register" \
@@ -94,7 +94,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.3 Get Subdomain Details
+### 1.3 하위 도메인 상세 조회
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=get&subdomain_id=1" \
@@ -104,7 +104,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.4 Delete Subdomain
+### 1.4 하위 도메인 삭제
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=delete" \
@@ -116,7 +116,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.5 Renew Subdomain
+### 1.5 하위 도메인 갱신
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=renew" \
@@ -128,9 +128,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-## 2️⃣ DNS Records Management
+## 2️⃣ DNS 레코드 관리
 
-### List DNS Records
+### DNS 레코드 목록 조회
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=list&subdomain_id=1" \
@@ -140,7 +140,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_record
 
 ---
 
-### Create DNS Record
+### DNS 레코드 생성
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=create" \
@@ -156,9 +156,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_recor
 
 ---
 
-## 3️⃣ API Key Management
+## 3️⃣ API 키 관리
 
-### List API Keys
+### API 키 목록 조회
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=list" \
@@ -168,7 +168,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&actio
 
 ---
 
-## 4️⃣ Quota
+## 4️⃣ 할당량 조회
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
@@ -178,7 +178,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
 
 ---
 
-## 5️⃣ WHOIS Lookup (Public API)
+## 5️⃣ WHOIS 조회 (공개 API)
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=foo.example.com"
@@ -186,7 +186,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## ❗ Error Format
+## ❗ 오류 형식
 
 ```json
 {
@@ -198,7 +198,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🚦 Rate Limiting
+## 🚦 요청 속도 제한
 
 ```json
 {
@@ -212,42 +212,42 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🔐 Security Best Practices
+## 🔐 보안 권장 사항
 
-* Store API credentials in environment variables
-* Enable IP whitelist for production keys
-* Rotate API keys regularly
-* Always use HTTPS
-
----
-
-## ❓ FAQ
-
-**Q: Lost API Secret?**
-A: Use `regenerate` to create a new one
-
-**Q: Batch operations supported?**
-A: Not supported in current version
+* API 인증 정보는 환경 변수에 저장하세요
+* 운영 환경의 키에는 IP 허용 목록을 활성화하세요
+* API 키를 정기적으로 교체하세요
+* 항상 HTTPS를 사용하세요
 
 ---
 
-## 📝 Changelog
+## ❓ 자주 묻는 질문
+
+**질문: API Secret을 분실했나요?**
+답변: `regenerate`를 사용하여 새로 생성하세요.
+
+**질문: 일괄 작업을 지원하나요?**
+답변: 현재 버전에서는 지원하지 않습니다.
+
+---
+
+## 📝 변경 이력
 
 ### v2.0 (2026-04-25)
 
-* 🚀 Official release of v2.0
-* 🔧 Optimized API command structure
-* ✨ Added new API capabilities
-* ⚡ Improved pagination & query performance
-* 🛡️ Enhanced error handling & security
+* 🚀 v2.0 정식 출시
+* 🔧 API 명령 구조 최적화
+* ✨ 새로운 API 기능 추가
+* ⚡ 페이지 나누기 및 조회 성능 개선
+* 🛡️ 오류 처리 및 보안 강화
 
 ---
 
 ### v1.0 (2025-10-19)
 
-* 🎉 Initial release
-* Subdomain management
-* DNS record management
-* API key management
-* Quota support
-* Rate limiting
+* 🎉 최초 출시
+* 하위 도메인 관리
+* DNS 레코드 관리
+* API 키 관리
+* 할당량 지원
+* 요청 속도 제한

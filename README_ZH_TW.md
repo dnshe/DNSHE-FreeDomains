@@ -12,7 +12,7 @@
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="前往官網"></a>
 </p>
 
-<p align="center"><a href="./README.md">English</a> · <a href="./README_ZH.md">简体中文</a> · <strong>繁體中文</strong> · <a href="./README_JA.md">日本語</a> · <a href="./README_RU.md">Русский</a></p>
+<p align="center" dir="ltr"><a href="./README.md">English</a> · <a href="./README_ZH.md">简体中文</a> · <strong>繁體中文</strong> · <a href="./README_JA.md">日本語</a> · <a href="./README_RU.md">Русский</a> · <a href="./README_ID.md">Bahasa Indonesia</a> · <a href="./README_DE.md">Deutsch</a> · <a href="./README_FR.md">Français</a> · <a href="./README_KO.md">한국어</a> · <a href="./README_AR.md">العربية</a></p>
 
 ## 關於 DNSHE
 
@@ -66,7 +66,7 @@ DNSHE 是由新加坡青年團隊推動的非營利網域分發平台，致力�
 透過 API 以程式方式管理網域和解析記錄，將 DNSHE 整合至你的指令碼、測試環境或部署流程：
 
 - [線上 API 使用手冊](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [儲存庫內 API 文件（簡體中文）](./docs/api_zh.md) · [英文版](./docs/api.md)
+- [繁體中文 API 文件](./docs/api_zh_tw.md) · [英文版](./docs/api.md)
 - [控制台與 API 金鑰管理入口](https://my.dnshe.com/index.php?m=domain_hub)
 - [說明中心](https://my.dnshe.com/knowledgebase)
 

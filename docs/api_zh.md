@@ -1,5 +1,9 @@
 # DNSHE 免费域名 API 文档（v2.0）
 
+<p align="center" dir="ltr"><a href="./api.md">English</a> · <strong>简体中文</strong> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
+
+[返回项目介绍](../README_ZH.md)
+
 ## 📌 基本信息
 
 * **API地址：**

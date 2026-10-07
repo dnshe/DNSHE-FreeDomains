@@ -1,33 +1,33 @@
-# DNSHE Free Domain API Documentation (v2.0)
+# DNSHE 免費網域 API 文件（v2.0）
 
-<p align="center" dir="ltr"><strong>English</strong> · <a href="./api_zh.md">简体中文</a> · <a href="./api_zh_tw.md">繁體中文</a> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
+<p align="center" dir="ltr"><a href="./api.md">English</a> · <a href="./api_zh.md">简体中文</a> · <strong>繁體中文</strong> · <a href="./api_ja.md">日本語</a> · <a href="./api_ru.md">Русский</a> · <a href="./api_id.md">Bahasa Indonesia</a> · <a href="./api_de.md">Deutsch</a> · <a href="./api_fr.md">Français</a> · <a href="./api_ko.md">한국어</a> · <a href="./api_ar.md">العربية</a></p>
 
-[Back to introduction](../README.md)
+[返回專案介紹](../README_ZH_TW.md)
 
-## 📌 Overview
+## 📌 基本資訊
 
-* **Base URL:**
+* **API 位址：**
   `https://api005.dnshe.com/index.php?m=domain_hub`
-* **Authentication:** API Key + API Secret
-* **Response Format:** JSON
-* **Rate Limit:** 60 requests/minute (configurable)
+* **驗證方式：** API Key + API Secret
+* **回應格式：** JSON
+* **速率限制：** 每分鐘 60 次請求（可設定）
 
 ---
 
-## 🔐 Authentication
+## 🔐 驗證
 
-### Get API Credentials
+### 取得 API 憑證
 
-1. Log in to DNSHE client area
-2. Go to **My Domain Management**
-3. Click **API Management** in sidebar
-4. Create a new API Key
+1. 登入 DNSHE 客戶中心
+2. 進入 **我的網域管理**
+3. 在側邊欄點選 **API 管理**
+4. 建立新的 API 金鑰
 
 ---
 
-### Authentication Method
+### 驗證方式
 
-#### ✅ Recommended: HTTP Headers
+#### ✅ 建議方式：HTTP 標頭
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -35,23 +35,23 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### ❌ Deprecated: URL Parameters
+#### ❌ 已停用方式：URL 參數
 
-> Passing `api_key` and `api_secret` via URL or request body is no longer supported for security reasons.
-
----
-
-## 📦 API Endpoints
+> 基於安全考量，不再支援透過 URL 或請求主體傳遞 `api_key` 和 `api_secret`。
 
 ---
 
-## 1️⃣ Subdomain Management
+## 📦 API 端點
 
-### 1.1 List Subdomains
+---
 
-* **Endpoint:** `subdomains`
-* **Action:** `list`
-* **Method:** `GET`
+## 1️⃣ 子網域管理
+
+### 1.1 列出子網域
+
+* **端點:** `subdomains`
+* **操作:** `list`
+* **方法:** `GET`
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=list" \
@@ -59,7 +59,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
   -H "X-API-Secret: yyyyyyyyyyyy"
 ```
 
-#### Response Example
+#### 回應範例
 
 ```json
 {
@@ -79,7 +79,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.2 Register Subdomain
+### 1.2 註冊子網域
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=register" \
@@ -94,7 +94,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.3 Get Subdomain Details
+### 1.3 取得子網域詳細資訊
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=get&subdomain_id=1" \
@@ -104,7 +104,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains
 
 ---
 
-### 1.4 Delete Subdomain
+### 1.4 刪除子網域
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=delete" \
@@ -116,7 +116,7 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-### 1.5 Renew Subdomain
+### 1.5 續期子網域
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomains&action=renew" \
@@ -128,9 +128,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=subdomain
 
 ---
 
-## 2️⃣ DNS Records Management
+## 2️⃣ DNS 記錄管理
 
-### List DNS Records
+### 列出 DNS 記錄
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=list&subdomain_id=1" \
@@ -140,7 +140,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_record
 
 ---
 
-### Create DNS Record
+### 建立 DNS 記錄
 
 ```bash
 curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_records&action=create" \
@@ -156,9 +156,9 @@ curl -X POST "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=dns_recor
 
 ---
 
-## 3️⃣ API Key Management
+## 3️⃣ API 金鑰管理
 
-### List API Keys
+### 列出 API 金鑰
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&action=list" \
@@ -168,7 +168,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=keys&actio
 
 ---
 
-## 4️⃣ Quota
+## 4️⃣ 配額查詢
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
@@ -178,7 +178,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=quota" \
 
 ---
 
-## 5️⃣ WHOIS Lookup (Public API)
+## 5️⃣ WHOIS 查詢（公開 API）
 
 ```bash
 curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&domain=foo.example.com"
@@ -186,7 +186,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## ❗ Error Format
+## ❗ 錯誤格式
 
 ```json
 {
@@ -198,7 +198,7 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🚦 Rate Limiting
+## 🚦 速率限制
 
 ```json
 {
@@ -212,42 +212,42 @@ curl -X GET "https://api005.dnshe.com/index.php?m=domain_hub&endpoint=whois&doma
 
 ---
 
-## 🔐 Security Best Practices
+## 🔐 安全建議
 
-* Store API credentials in environment variables
-* Enable IP whitelist for production keys
-* Rotate API keys regularly
-* Always use HTTPS
-
----
-
-## ❓ FAQ
-
-**Q: Lost API Secret?**
-A: Use `regenerate` to create a new one
-
-**Q: Batch operations supported?**
-A: Not supported in current version
+* 使用環境變數儲存 API 憑證
+* 為正式環境的金鑰啟用 IP 允許清單
+* 定期輪替 API 金鑰
+* 一律使用 HTTPS
 
 ---
 
-## 📝 Changelog
+## ❓ 常見問題
+
+**問：遺失 API Secret 怎麼辦？**
+答：使用 `regenerate` 重新產生。
+
+**問：支援批次操作嗎？**
+答：目前版本不支援。
+
+---
+
+## 📝 更新紀錄
 
 ### v2.0 (2026-04-25)
 
-* 🚀 Official release of v2.0
-* 🔧 Optimized API command structure
-* ✨ Added new API capabilities
-* ⚡ Improved pagination & query performance
-* 🛡️ Enhanced error handling & security
+* 🚀 正式發布 v2.0
+* 🔧 最佳化 API 指令結構
+* ✨ 新增 API 功能
+* ⚡ 改善分頁與查詢效能
+* 🛡️ 強化錯誤處理與安全性
 
 ---
 
 ### v1.0 (2025-10-19)
 
-* 🎉 Initial release
-* Subdomain management
-* DNS record management
-* API key management
-* Quota support
-* Rate limiting
+* 🎉 首次發布
+* 子網域管理
+* DNS 記錄管理
+* API 金鑰管理
+* 配額查詢
+* 速率限制

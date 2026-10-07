@@ -12,7 +12,7 @@
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="公式サイトへ"></a>
 </p>
 
-<p align="center"><a href="./README.md">English</a> · <a href="./README_ZH.md">简体中文</a> · <a href="./README_ZH_TW.md">繁體中文</a> · <strong>日本語</strong> · <a href="./README_RU.md">Русский</a></p>
+<p align="center" dir="ltr"><a href="./README.md">English</a> · <a href="./README_ZH.md">简体中文</a> · <a href="./README_ZH_TW.md">繁體中文</a> · <strong>日本語</strong> · <a href="./README_RU.md">Русский</a> · <a href="./README_ID.md">Bahasa Indonesia</a> · <a href="./README_DE.md">Deutsch</a> · <a href="./README_FR.md">Français</a> · <a href="./README_KO.md">한국어</a> · <a href="./README_AR.md">العربية</a></p>
 
 ## DNSHE について
 
@@ -66,7 +66,7 @@ DNSHE は、シンガポールの若者チームが運営する非営利のド�
 API を使ってドメインと DNS レコードを管理し、スクリプト、テスト環境、デプロイパイプラインに組み込めます。
 
 - [オンライン API マニュアル](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [リポジトリ内の API ドキュメント（英語）](./docs/api.md) · [簡体字中国語版](./docs/api_zh.md)
+- [日本語 API ドキュメント](./docs/api_ja.md) · [英語版](./docs/api.md)
 - [管理画面・API 認証情報の管理](https://my.dnshe.com/index.php?m=domain_hub)
 - [ヘルプセンター](https://my.dnshe.com/knowledgebase)
 

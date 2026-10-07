@@ -12,7 +12,7 @@
   <a href="https://www.dnshe.com/"><img src="https://img.shields.io/badge/Website-dnshe.com-1e293b?style=for-the-badge" alt="Перейти на официальный сайт"></a>
 </p>
 
-<p align="center"><a href="./README.md">English</a> · <a href="./README_ZH.md">简体中文</a> · <a href="./README_ZH_TW.md">繁體中文</a> · <a href="./README_JA.md">日本語</a> · <strong>Русский</strong></p>
+<p align="center" dir="ltr"><a href="./README.md">English</a> · <a href="./README_ZH.md">简体中文</a> · <a href="./README_ZH_TW.md">繁體中文</a> · <a href="./README_JA.md">日本語</a> · <strong>Русский</strong> · <a href="./README_ID.md">Bahasa Indonesia</a> · <a href="./README_DE.md">Deutsch</a> · <a href="./README_FR.md">Français</a> · <a href="./README_KO.md">한국어</a> · <a href="./README_AR.md">العربية</a></p>
 
 ## О DNSHE
 
@@ -66,7 +66,7 @@ DNSHE — некоммерческая платформа предоставле
 Управляйте доменами и DNS-записями программно, подключая DNSHE к скриптам, тестовым средам и процессам развёртывания:
 
 - [Онлайн-руководство по API](https://my.dnshe.com/knowledgebase/1/Free-Domain-Name-Service-API-User-Manual)
-- [Документация API в репозитории на английском](./docs/api.md) · [На упрощённом китайском](./docs/api_zh.md)
+- [Документация API на русском](./docs/api_ru.md) · [На английском](./docs/api.md)
 - [Панель управления и управление учётными данными API](https://my.dnshe.com/index.php?m=domain_hub)
 - [База знаний](https://my.dnshe.com/knowledgebase)
 
