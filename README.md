@@ -1,7 +1,6 @@
 <p align="center">
   <a href="https://www.dnshe.com/"><img src="./assets/dnshe-logo.png" alt="DNSHE" width="280"></a>
 </p>
-
 <h1 align="center">DNSHE Free Domains</h1>
 
 <p align="center">Simple, fast, free domain registration and DNS. Give every idea a home on the internet.</p>
